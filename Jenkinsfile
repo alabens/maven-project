@@ -4,7 +4,7 @@ pipeline{
            stage('Build'){
               steps {
                         sh "mvn clean package"
-                        sh "sudo docker build . -t tomcatwebapp:${env.BUILD_ID}"
+                        sh "root:sudo docker build . -t tomcatwebapp:${env.BUILD_ID}"
 
                     }
                 }
